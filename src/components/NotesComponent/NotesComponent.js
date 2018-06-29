@@ -144,6 +144,8 @@ class NotesComponent extends Component {
             key={item.id}
             item={item}
             clicked={(e) => this.selectNote(e, item)}
+            selected={(this.state.selected != null &&
+                          this.state.selected.id === item.id) ? true : false}
           />
       )} else {
         return false;
